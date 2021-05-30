@@ -1,0 +1,7 @@
+{
+  "name": "ionic-nadhmi-app",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}
