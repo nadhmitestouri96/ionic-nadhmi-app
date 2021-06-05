@@ -35,6 +35,26 @@ const routes: Routes = [
     path: 'about',
     loadChildren: () => import('./about/about.module').then( m => m.AboutPageModule)
   },
+
+  {
+    path: 'create',
+    loadChildren: () => import('./create/create.module').then( m => m.CreatePageModule)
+  },
+  {
+    path: 'list',
+    loadChildren: () => import('./list/list.module').then( m => m.ListPageModule)
+  },
+  {
+    path: 'update',
+    loadChildren: () => import('./update/update.module').then( m => m.UpdatePageModule)
+  },
+
+
+
+
+
+
+
 ];
 
 @NgModule({

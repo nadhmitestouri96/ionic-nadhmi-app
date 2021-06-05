@@ -1,0 +1,40 @@
+<ion-header>
+  <ion-toolbar color="netflix-dark">
+      <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+      </ion-buttons>
+    <ion-title>
+      Add comment
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list lines="full">
+    <form [formGroup]="userForm" (ngSubmit)="onSubmit()">
+      <ion-item>
+        <ion-label position="floating" class="label">your Nickname</ion-label>
+        <ion-input formControlName="name" type="text" required class="input"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="floating" class="label">Anime Name</ion-label>
+        <ion-input formControlName="animename" type="text" required class="input">
+        </ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="floating" class="label">Your comment</ion-label>
+        <ion-input formControlName="comment" type="text" required class="input">
+        </ion-input>
+      </ion-item>
+
+      <ion-row>
+        <ion-col>
+          <ion-button type="submit" color="netflix-red" expand="block">Add</ion-button>
+          <ion-button href="/list"  expand="block" color="medium">Cancel</ion-button>
+        </ion-col>
+      </ion-row>
+    </form>
+  </ion-list>
+</ion-content>

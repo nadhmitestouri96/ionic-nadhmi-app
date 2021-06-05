@@ -1,0 +1,33 @@
+<ion-header>
+  <ion-toolbar color="netflix-dark">
+      <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+      </ion-buttons>
+    <ion-title>
+      Comments
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-list>
+    <ion-item *ngFor="let user of Users">
+      <ion-label>
+        <h2>{{user.name}}</h2>
+        <h3>{{user.animename}}</h3>
+        <h4>{{user.comment}}</h4>
+      </ion-label>
+
+      <div class="item-note" item-end>
+        <button ion-button clear [routerLink]="['/update/', user]">
+          <ion-icon name="create" style="zoom:1.5"></ion-icon>
+        </button>
+        <button ion-button clear (click)="removeUser(user)">
+          <ion-icon name="trash" style="zoom:1.5"></ion-icon>
+        </button>
+      </div>
+    </ion-item>
+  </ion-list>
+  <ion-button round href="/create" color="netflix-red">Add comment</ion-button>
+</ion-content>

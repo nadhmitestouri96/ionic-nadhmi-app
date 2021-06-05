@@ -1,18 +1,18 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { RouteReuseStrategy } from '@angular/router';
-
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { IonicModule, IonicRouteStrategy } from '@ionic/angular';
 import { SplashScreen } from '@ionic-native/splash-screen/ngx';
 import { StatusBar } from '@ionic-native/status-bar/ngx';
 
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
-
+import { HttpClientModule } from '@angular/common/http';
 import { AngularFireModule } from '@angular/fire';
 import { AngularFireAuthModule } from '@angular/fire/auth';
 import { environment } from '../environments/environment';
-import {AnimePageModule} from './anime/anime.module'
+import {AnimePageModule} from './anime/anime.module';
 
 
 @NgModule({
@@ -20,9 +20,13 @@ import {AnimePageModule} from './anime/anime.module'
   entryComponents: [],
   imports: [
     AnimePageModule,
+    FormsModule,
   BrowserModule,
+  ReactiveFormsModule,
     IonicModule.forRoot(),
+    
     AppRoutingModule,
+    HttpClientModule,
     AngularFireAuthModule,
     AngularFireModule.initializeApp(environment.firebase)
   ],

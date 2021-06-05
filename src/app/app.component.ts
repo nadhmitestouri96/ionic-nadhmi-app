@@ -40,6 +40,11 @@ export class AppComponent {
         icon  : "newspaper-outline"
       },
       {
+        title : "Comments",
+        url   : "/list",
+        icon  : "chatbox-ellipses-outline"
+      },
+      {
         title : "Logout",
         url   : "/logout",
         icon  : "log-out-outline"
